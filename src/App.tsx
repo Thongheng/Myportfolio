@@ -1,6 +1,3 @@
-import React from 'react';
-import { Terminal, Shield, Code2, Fingerprint, Lock, Webhook, ChevronRight, Mail, Github, Linkedin, Award } from 'lucide-react';
-
 function App() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] text-white">
@@ -8,7 +5,6 @@ function App() {
       <header className="fixed top-0 w-full bg-black/50 backdrop-blur-md z-50">
         <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Terminal className="w-6 h-6 text-[#FF4444]" />
             <span className="font-bold">SecurityPro</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
@@ -23,7 +19,7 @@ function App() {
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto ">
           <div className="flex flex-col items-start space-y-6">
             <h1 className="text-5xl md:text-7xl font-bold leading-tight">
               Offensive Security
@@ -38,7 +34,7 @@ function App() {
               className="group flex items-center space-x-2 bg-[#FF4444] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#FF4444]/90 transition-colors"
             >
               <span>Get in touch</span>
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
           </div>
         </div>
@@ -46,32 +42,27 @@ function App() {
 
       {/* Skills Section */}
       <section id="skills" className="py-20 px-6 bg-black/50">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto ">
           <h2 className="text-3xl font-bold mb-12">Core Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Shield className="w-8 h-8 text-[#FF4444]" />,
                 title: 'Penetration Testing',
                 description: 'Comprehensive security assessments of web applications, networks, and infrastructure.'
               },
               {
-                icon: <Code2 className="w-8 h-8 text-[#FF4444]" />,
                 title: 'Vulnerability Assessment',
                 description: 'Systematic review of security weaknesses in systems and applications.'
               },
               {
-                icon: <Fingerprint className="w-8 h-8 text-[#FF4444]" />,
                 title: 'Red Team Operations',
                 description: 'Advanced adversary simulation and security control validation.'
               },
               {
-                icon: <Lock className="w-8 h-8 text-[#FF4444]" />,
                 title: 'Security Consulting',
                 description: 'Strategic security guidance and best practice recommendations.'
               },
               {
-                icon: <Webhook className="w-8 h-8 text-[#FF4444]" />,
                 title: 'Social Engineering',
                 description: 'Human vulnerability assessment and awareness training.'
               }
@@ -80,7 +71,6 @@ function App() {
                 key={index}
                 className="p-6 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
               >
-                {skill.icon}
                 <h3 className="text-xl font-semibold mt-4 mb-2">{skill.title}</h3>
                 <p className="text-gray-400">{skill.description}</p>
               </div>
@@ -91,7 +81,7 @@ function App() {
 
       {/* Certificates Section */}
       <section id="certificates" className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto ">
           <h2 className="text-3xl font-bold mb-12">Certifications</h2>
           <div className="relative">
             <div className="flex space-x-6 overflow-x-auto pb-6 scrollbar-hide">
@@ -126,7 +116,7 @@ function App() {
                   className="flex-none w-[300px] p-6 rounded-lg bg-white/5 hover:bg-white/10 transition-colors border border-[#FF4444]/20"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    <Award className="w-6 h-6 text-[#FF4444]" />
+                    <span className="text-[#FF4444]">🏆</span>
                     <h3 className="text-xl font-semibold">{cert.title}</h3>
                   </div>
                   <p className="text-[#FF4444] font-medium mb-2">{cert.issuer}</p>
@@ -141,7 +131,7 @@ function App() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-6 bg-black/50">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto ">
           <h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
           <div className="relative">
             <div className="flex space-x-6 overflow-x-auto pb-6 scrollbar-hide">
@@ -192,7 +182,7 @@ function App() {
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto ">
           <h2 className="text-3xl font-bold mb-12">Get in Touch</h2>
           <div className="flex flex-col md:flex-row gap-12">
             <div className="flex-1">
@@ -204,7 +194,7 @@ function App() {
                   href="mailto:contact@example.com"
                   className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
                 >
-                  <Mail className="w-6 h-6" />
+                  ✉️
                 </a>
                 <a 
                   href="https://github.com"
@@ -212,7 +202,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
                 >
-                  <Github className="w-6 h-6" />
+                  GitHub
                 </a>
                 <a 
                   href="https://linkedin.com"
@@ -220,7 +210,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors"
                 >
-                  <Linkedin className="w-6 h-6" />
+                  LinkedIn
                 </a>
               </div>
             </div>
@@ -253,7 +243,7 @@ function App() {
 
       {/* Footer */}
       <footer className="py-8 px-6 border-t border-white/10">
-        <div className="container mx-auto max-w-6xl text-center text-gray-400">
+        <div className="container mx-auto  text-center text-gray-400">
           © {new Date().getFullYear()} SecurityPro. All rights reserved.
         </div>
       </footer>
