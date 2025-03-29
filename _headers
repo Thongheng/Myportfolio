@@ -1,4 +1,4 @@
 /*
-  Permissions-Policy: interest-cohort=()
   X-Content-Type-Options: nosniff
+  Access-Control-Allow-Origin: *
   Content-Type: text/javascript; charset=utf-8
